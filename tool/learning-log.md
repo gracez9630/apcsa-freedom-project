@@ -14,9 +14,15 @@ Project: **X**
 10/30/23:
 * [Video Tutorial](https://www.youtube.com/watch?v=nGIg40xs9e4)
 * Django is a powerful web framer for Python
+* DJango is compatible with many different databases
 * Has been used to build websites like instagram, spotify, and dropbox
 * When in Python, use  `pip 20.2.3 from c:\python39\lib\site-packages\pip (python 3.9)` to download django into it
 * `django-admin startproject projectName` - creates a project directory with files inside it
+* `_init_.py` is a file that tells python to treat this directory like a python package
+* `asgi.py` and `wsgi.py` does not need to be touched, let's DJango communicate with the webcircle.
+* `settings.py` is a setting, will mostly go into to install different DJango applications, plugins, change some of the middleware, and modify the database engines
+* `urls.py` use to help configure different URL routes that can be route or direct to different DJango applications
+* `manage.py` acts like a command line tool that allows us to run special commands, do things like make database migrations, run our python server and all kinds of other things like creating users for our DJango admin panel
 
 
 <!-- 
