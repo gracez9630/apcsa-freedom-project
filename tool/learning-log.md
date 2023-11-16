@@ -32,7 +32,7 @@ Project: **X**
    * Object-relational mapper (ORM) - abstracts the database so we can query or persist data without writing a lot of sql code
    * authentication - for identifying users
    * caching - for caching data and more
-* 
+
 
 
 <!-- 
