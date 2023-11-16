@@ -24,6 +24,16 @@ Project: **X**
 * `urls.py` use to help configure different URL routes that can be route or direct to different DJango applications
 * `manage.py` acts like a command line tool that allows us to run special commands, do things like make database migrations, run our python server and all kinds of other things like creating users for our DJango admin panel
 
+11/15/23:
+* [Video tutorial](https://www.youtube.com/watch?v=rHux0gMZ3Eg&t=188s)
+* very popular because can make a website in less time and less code
+* dajango features:
+   * admin site - manages data
+   * Object-relational mapper (ORM) - abstracts the database so we can query or persist data without writing a lot of sql code
+   * authentication - for identifying users
+   * caching - for caching data and more
+* 
+
 
 <!-- 
 * Links you used today (websites, videos, etc)
