@@ -33,7 +33,27 @@ Project: **X**
    * authentication - for identifying users
    * caching - for caching data and more
 
-
+11/19/23:
+* in views.py you can return a name input into the html.
+```
+def say_hello(request):
+  return render(request, 'hello.html', {'name': 'Mosh'})
+```
+* render can be used to render a template and return the html markup to the client
+* output:
+```html
+<h1>Hello {{ name }} </h1>
+```
+* can also use a if statement in html to make it say "Hello World" if there is no name
+```html
+{% if name %}
+<h1>Hello {{ name }} </h1>
+{% else %}
+<h1>Hello World</h1>
+{% endif %}
+```
+* Django can replace django default template engine with a preferred template engine
+* use Django to build api to return data
 
 <!-- 
 * Links you used today (websites, videos, etc)
