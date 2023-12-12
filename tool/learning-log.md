@@ -55,6 +55,11 @@ def say_hello(request):
 * Django can replace django default template engine with a preferred template engine
 * use Django to build api to return data
 
+12/11/23:
+* [Python Django Tutorial: Full-Featured Web App Part 2 - Applications and Routes](https://www.youtube.com/watch?v=a48xeeo5Vnk&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=2)
+* have to first create a secret key by following the tutorial on `README.md` and watch a 1 minute video guide.
+* `python manage.py startapp name` - use to create new app (in shell)
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
