@@ -62,6 +62,20 @@ def say_hello(request):
 * `django-admin startproject mysite` - a code used to establish a django project, a collection of instance of django, including database configuration, Django-specific options and application-specific settings.
 * `python manage.py runserver` - use to see if the django project works.
 
+12/14/23:
+* `from django.shortcuts import render` - combines a template with a context dictionary and returns an HttpResponse object with the rendered text.
+* `from django.http import HttpResponse` - uses request and response objects to pass state through the system.
+```python
+def home(request):
+  return HttpResponse("<h1>Home</h1>")
+```
+* `def` = define
+  * used to define a function or method
+* `HttpRequest` - use to access a resource on the server
+* `request` - a type of argument
+  * Argument types specifies the type of argument the definition contains.
+* `return HttpResponse("<h1>Home</h1>")` - a `HttpResponse` that says that we are on the home page
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
