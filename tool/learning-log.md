@@ -76,6 +76,24 @@ def home(request):
   * Argument types specifies the type of argument the definition contains.
 * `return HttpResponse("<h1>Home</h1>")` - a `HttpResponse` that says that we are on the home page
 
+12/16/23:
+* `from django.urls import path` - makes it route urls to the appropriate view functions within a Django application using the url dispatcher
+  * `include` - after `path`, is another type of function
+* `urlpatterns` - a set of patterns that Django will try to match the requested URL to find the correct view
+  * ```python
+    urlpatterns = [ 
+    path('admin/', admin.site.urls), 
+    path('', views.home, name='blog-home'), 
+    ] 
+    ```
+    * `path('admin/', admin.site.urls),` - the view that gets run when we go to /admin
+    * `path('', views.home),` - tells Django the one that we want to handle that logic at that home page route
+    * `name=blog-home` - is the name for the path
+  * `path('mySite/', include('mySite.urls')),`
+    * when type in `/mySite`, will map to our blog folder and into the url file which would then map into the home view.
+* `from . import views` - can input `views.py` into the `url.py` file
+* back into the `django-project` file, go into their `url.py` file to tell Django which route should get mapped to our blog urls
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
