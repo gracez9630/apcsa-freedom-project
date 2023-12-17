@@ -89,7 +89,9 @@ def home(request):
     * `path('admin/', admin.site.urls),` - the view that gets run when we go to /admin
     * `path('', views.home),` - tells Django the one that we want to handle that logic at that home page route
     * `name=blog-home` - is the name for the path
-  * `path('mySite/', include('mySite.urls')),`
+  * ```python
+    path('mySite/', include('mySite.urls')),
+    ```
     * when type in `/mySite`, will map to our blog folder and into the url file which would then map into the home view.
 * `from . import views` - can input `views.py` into the `url.py` file
 * back into the `django-project` file, go into their `url.py` file to tell Django which route should get mapped to our blog urls
