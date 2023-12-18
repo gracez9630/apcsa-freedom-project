@@ -49,7 +49,7 @@ path('mySite/', include('mySite.urls')),
 
 During these weeks, I made sure to use skills like "How to Google" and "Embracing Failure" while learning Django. "How to Google" was very helpful as there were times in videos where they may have used a code I may not have known, and by googling it I would be able to gain a understanding of how and why I may need it for future codings. "Embracing Failure" made it so even if I was struggling a few times and realizing some errors that I made, especially when it come to making my `mySite` folder, I would learn from that mistake and try to adapt to it while learning about the mistakes that I've made. With the many different sites and videos, I have been learning django by trying pieces of it in replit. Since to learn a thing I would have to first know how it may be used, I tried to practice a bit during the days.
 
-[Replit image](img/capture.PNG)
+[Replit image](img/Capture.PNG)
 
 During the winter break, my goal would be continuing to watch the rest of the parts from [Python Django Tutorial: Full-Featured Web App Part 2 - Applications and Routes](https://www.youtube.com/watch?v=a48xeeo5Vnk&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=2) since it was a very helpful guide to me. With it, I intend to take as much notes as I can about it and to see if there are any useful methods I may be able to use into my freedom project.
 
