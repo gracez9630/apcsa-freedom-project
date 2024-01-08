@@ -97,10 +97,10 @@ def home(request):
 * back into the `django-project` file, go into their `url.py` file to tell Django which route should get mapped to our blog urls
 
 1/8/24:
-* (tips for Django)[https://medium.com/analytics-vidhya/7-tips-and-more-to-ensure-a-successful-django-project-331a8d5746a3]
-* (Django philosophies)[https://docs.djangoproject.com/en/2.1/misc/design-philosophies/]
-* (Django packages)[https://djangopackages.org/]
-* (Django Tutorial for custom user model)[https://learndjango.com/tutorials/django-custom-user-model]
+* [tips for Django](https://medium.com/analytics-vidhya/7-tips-and-more-to-ensure-a-successful-django-project-331a8d5746a3)
+* [Django philosophies](https://docs.djangoproject.com/en/2.1/misc/design-philosophies/)
+* [Django packages](https://djangopackages.org/)
+* [Django Tutorial for custom user model](https://learndjango.com/tutorials/django-custom-user-model)
   * can help as a blueprint to save time and ensure some safety that the libraries have been tested by multiple Django developers.
 * try to use the minimum amount of codes to make it easier to maintain and organize.
 * 
