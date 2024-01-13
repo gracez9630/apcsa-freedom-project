@@ -103,7 +103,21 @@ def home(request):
 * [Django Tutorial for custom user model](https://learndjango.com/tutorials/django-custom-user-model)
   * can help as a blueprint to save time and ensure some safety that the libraries have been tested by multiple Django developers.
 * try to use the minimum amount of codes to make it easier to maintain and organize.
-* 
+
+1/12/24:
+* [Python Django Tutorial: Full-Featured Web App Part 3 - Templates](https://www.youtube.com/watch?v=qDwdMDQ8oX4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=3)
+* A way to create a html template and connect it to `views.py` to make a whole webpage
+  * Create a whole new folder that stores all the html files
+  * it is recommended to be able to add the application to the list, we first add the app configuration to the `settings.py` module
+  * `apps.py` should have:
+    * ```python
+      class BlogConfig(AppConfig):
+        name = 'blog'
+      ```
+      * `BlogConfig` inherits the `AppConfig` class
+  * in `settings.py`, under the `INSTALLED_APPS` list, add `'blog.apps.BlogConfig',`
+    * allows Django to correctly search the templates and for databases
+    * where Django looks for our models
 
 <!-- 
 * Links you used today (websites, videos, etc)
