@@ -153,7 +153,7 @@ def home(request):
     * inside `return render(request, 'blog/home.html')`, after `'blog/home.html'`, add the dictionary `context`
       * third argument that pass the data into the template and let us access it
     * inside the file to add the information from context:
-      * ```python
+      * ```html
         {% for post in posts %}
           <h1>{{ post.title }}</h1>
           <p>By {{ post.author }} on {{ post.date_posted }}</p>
