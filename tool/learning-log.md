@@ -119,6 +119,60 @@ def home(request):
     * allows Django to correctly search the templates and for databases
     * where Django looks for our models
 
+1/13/24:
+* continuation of part 3:
+  * `from django.shortcuts import render` is a shortcut that can help make a seemingly long code to make `HttpResponse` connect with a file into one piece of code
+    * `return render(request, 'blog/home.html')`
+      * `render()` takes the `request` object as it's first argument
+      * second object for `render()` is the template name that we want to render
+    * overall is a way to pass information into our template
+  * to create a blog post:
+    * inside `views.py` make a array list:
+      * ```python
+        posts = [
+          {
+            'author': 'Name1',
+            'title': 'Blog Post 1',
+            'content': 'first post content',
+            'date_posted': '1/13/24',
+          },
+          {
+            'author': 'Name2',
+            'title': 'Blog Post 2',
+            'content': 'second post content',
+            'date_posted': '12/20/23',
+          },
+        ]
+        ```
+    * inside `def home(request):` create a dictionary:
+      * ```python
+        context = {
+          'posts': posts
+        }
+        ```
+    * inside `return render(request, 'blog/home.html')`, after `'blog/home.html'`, add the dictionary `context`
+      * third argument that pass the data into the template and let us access it
+    * inside the file to add the information from context:
+      * ```python
+        {% for post in posts %}
+          <h1>{{ post.title }}</h1>
+          <p>By {{ post.author }} on {{ post.date_posted }}</p>
+          <p>{{ post.content }}</p>
+        {% endfor %}
+        ```
+        * `{% for ... %}` is the `for` loop
+        * `{% endfor %} ends the `for` loop
+        * `{{ post.title }}` - goes throught the dictionary of `post` and grabs the one with the title
+      * should print out something that would look like this in source code:
+        * ```html
+          <h1>Blog Post 1</h1>
+          <p>By Name1 on 1/13/24</p>
+          <p>first post content</p>
+
+          <h1>Blog Post 2</h1>
+          <p>By Name2 on 12/20/23</p>
+          <p>second post content</p>
+          ```
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
