@@ -173,6 +173,28 @@ def home(request):
           <p>By Name2 on 12/20/23</p>
           <p>second post content</p>
           ```
+
+1/16/24:
+* continuation of part 3:
+  * `'posts'` variable inside `def home(request):` in `views.py` becomes accessible inside the template/file
+    * lets the template/file to have access to the `post` array
+  * using if:
+    * ```python
+      {% if title %}
+      <title>Django Blog - {{ title }}</title>
+      {% else %}
+      <title>Django Blog</title>
+      {% endif %}
+      ```
+      * `{% if title %}` - is the `if` statement: asks if the `context` data have a title
+        * if so it outputs the title that the `context` have at where `{{ title }}` is at
+      * `{% else %} - if the `if` statement becomes false, it goes to this and prints out the other title
+        * if there is no title then it will just print out "Django Blog" with no `context` title
+      * `{% endif %} - ends the `if` statement
+    * in `views.py`, inside `return render(request, 'blog.about/html')`, after `'blog.about/html'` put `{'title': 'About'}` to reach the `title` directory and output `About` on the title.
+      * `return render(request, 'blog.about/html', {'title': 'About'})`
+      * html -  `<title>Django Blog - About</title>
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
