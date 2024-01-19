@@ -195,6 +195,32 @@ def home(request):
       * `return render(request, 'blog.about/html', {'title': 'About'})`
       * html -  `<title>Django Blog - About</title>
 
+1/18/24:
+* `{% block content %}{% endblock %}` - a section where child templates can override
+  * inside `base.html` 
+  * by getting rid of all the tags except the ones that made it unique and using `block`, it can allow coders to use less code than necesarry
+    * `home.html`:
+      * ```html
+        {% extends "blog/base.html" %}
+        {% block content %}
+          {% for post in posts %}
+            <h1>{{ post.title }}</h1>
+            <p>By {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content }}</p>
+          {% endfor %}
+        {% endblock content %}
+        ```
+        * `{% extends "blog/base.html" %} - allows it to use the `base.html` template by extending it
+        * does not need the `content` in `{% endblock content %}` but is used to keep in check of each `block` section
+    * when previewing to the `home.html` site, would still have the same output as how it was before but with less code
+    * if it were to add a tool like bootstrap into `base.html` template and add a `div` over `block`, the other templates that extends to `base.html` template also gets bootstrap
+* `{% load static %}` - lets us load in a `css` file from the `static` directory
+  * `<link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    * `static` generates an absolute URL of the `static` file and access the `blog/main.css`
+* `<a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>`
+  * `{% url 'blog-home' %} - would go to the `urls.py` where it would get the name of the home url pattern
+    * `base.html` --> `urls.py` - finds `blog-home` --> `home.html`
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
