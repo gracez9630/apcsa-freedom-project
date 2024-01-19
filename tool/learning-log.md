@@ -218,7 +218,7 @@ def home(request):
   * `<link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
     * `static` generates an absolute URL of the `static` file and access the `blog/main.css`
 * `<a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>`
-  * `{% url 'blog-home' %} - would go to the `urls.py` where it would get the name of the home url pattern
+  * `{% url 'blog-home' %}` - would go to the `urls.py` where it would get the name of the home url pattern
     * `base.html` --> `urls.py` - finds `blog-home` --> `home.html`
 
 <!-- 
