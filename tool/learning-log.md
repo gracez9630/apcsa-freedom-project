@@ -222,6 +222,26 @@ def home(request):
     * `{% url 'blog-home' %}` - would go to the `urls.py` where it would get the name of the home url pattern
       * `base.html` --> `urls.py` - finds `blog-home` --> `home.html`
 
+1/20/24:
+* [Python Django Tutorial: Full-Featured Web App Part 4 - Admin Page](https://www.youtube.com/watch?v=1PkNiYlkkjo&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=4)
+  * admin page is to see is on your site and also a nice GUI (Graphical User Interface) for creating, updating, or deleting that data
+  * your site and then "/admin" to enter the login page for your admin
+  * create a admin user:
+    * `python manage.py createsuperuser`
+      * won't work if it's just by itself because there haven't been a database created for the supposed project yet
+      * first: `python manage.py makemigrations`
+        * detects teh changes and prepared Django to update the database
+        * but doesn't actually run those changes yet
+      * `python manage.py migrate`
+    * `makemigrations` --> `migrate` --> `createsuperuser`
+  * after that would ask for a username, email address, and password for the admin site
+  * `python manage.py runserver`
+    * runs the actual server/site of the project
+  * once logged in, brings you to the default admin site
+  * on the "user", can create another one and give them different permissions to have
+    * "staff status" - be able to log in to the admin site
+    * "superuser status" - allows them to have all of the permissions
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
