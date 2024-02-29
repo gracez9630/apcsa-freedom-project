@@ -242,6 +242,48 @@ def home(request):
     * "staff status" - be able to log in to the admin site
     * "superuser status" - allows them to have all of the permissions
 
+2/29/24:
+* [Python Django Tutorial: Full-Featured Web App Part 5 - Database and Migrations](https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5)
+  * ORM - object relational mapper
+    * allows us to access our database and easy to use object oriented way
+    * use different database without changing code
+  * django ORM allows us to represent our database structure as classes called models
+  * `models.py`
+    * `class Post(models.Model):`
+      * each class will have be it's own table in the database
+      * create attribute
+        * each attricute will be a different field in the database
+        * `title = models.CharField(max_length=100)`
+          * a character field
+          * inside is used to specify restraints on the field
+            * a title that will be a field of our post table in the database
+            * title field will be a character field that has a restriction of a max length of 100
+        * `context = models.textField()`
+          * a text field
+            * unrestricted text
+          * possibly be lines and lines of texts
+        * `date_posted = models.DateTimeField()`
+          * a date/time field
+          * inside could have `auto_now=True`
+            * makes it so it would update the date posted to the current date time every time the post was updated
+          * inside could have `auto_now_add=True`
+            * set the date posted to the current date time only when the object was created
+            * will not allow to update the value of the date posted
+  * `from django.utils import timezone`
+      * a date time that will take the timezone settings into considerations
+        * `date_posted = models.DateTimeField(default=timezone.now)`
+          * same as `auto_now_add=True`
+          * but also allows the to update the value of the date posted
+  * `from django.contrib.auth.models import User`
+    * seperate table
+    * post model and user model will have a relation
+      * called a one-to-many relationship
+      * because one user can have multiple post but a post can only have one author/user
+    * `author = models.ForeignKey(User, on_delete)
+      * `on_delete` is needed to tell django is the user who created the post gets deleted
+      * `on_delete=models.CASCADE`
+        * tells django is the user who created the post gets deleted to also delete their post
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
