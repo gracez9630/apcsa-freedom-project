@@ -284,6 +284,46 @@ def home(request):
       * `on_delete=models.CASCADE`
         * tells django is the user who created the post gets deleted to also delete their post
 
+3/2/24:
+* continuation of [part 5](https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5)
+  * need to run migrations to update the database
+    * in the console:
+      * `python manage.py makemigrations`
+        * inside the `migration` directory, a file would be created by the migration runned on console
+        * file contains a lot of information of what it will do once the migrate command is runned
+      * `python manage.py migrate`
+        * runs the migration for the database to update
+    * migrations is useful
+      * allows us to change our database after it's created and has data in the database
+  * `python manage.py shell` <-- in console
+    * allows us to run python codes inside console
+    * work with our django objects
+      * `from blog.models import Post`
+        * imports the post
+      * `User.objects.all()`
+        * returns a QuerySet
+        * returns both of the users that was created at part 3, the array post
+      * `User.objects.first()`
+        * only returns the first one in the array post that was created at part 3
+      * `User.objects.filter(username='TestName')`
+        * `<QuerySet [<User: TestName>]>`
+        * filter by a field
+        * only has one user since the usernames are unique
+        * `User.objects.filter(username='TestName').first()`
+          * `<User: TestName>`
+          * only gets the first user without the QuerySet
+          * `user = User.objects.filter(username='TestName').first()`
+            * captures the user inside the `user` variable
+            * can see the attributes inside the user
+            * `user.id`
+              * sees the id of the user inside the `user` variable
+            * `user.pk`
+              * PK = primary key
+              * same thing as id
+          * `user = User.objects.get(id=1)`
+            * gets a user that has a id of 1 into the `user` variable
+            * 
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
