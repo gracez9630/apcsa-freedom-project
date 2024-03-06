@@ -322,7 +322,19 @@ def home(request):
               * same thing as id
           * `user = User.objects.get(id=1)`
             * gets a user that has a id of 1 into the `user` variable
-            * 
+
+3/5/24:
+* continuation of [part 5](https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5)
+  * console:
+    * `post.objects.all()`
+      * shows the QuerySet
+      * if has one, shows:
+        * `<QuerySet [<Post: Post object (1)>]>`
+    * `post_1 = Post(title='blog 1', content='first post', author=user)`
+      * what would show inside the QuerySet
+      * no date because have a default date
+    * `post_1.save()`
+      * saves it into the database
 
 <!-- 
 * Links you used today (websites, videos, etc)
