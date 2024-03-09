@@ -336,6 +336,40 @@ def home(request):
     * `post_1.save()`
       * saves it into the database
 
+3/9/24:
+* continuation of [part 5](https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5)
+  * `models.py`:
+    * dunder STR method
+      * to get the `post` object to be more descriptive by telling what we want to see when printed out
+      * also called magic method or special methods
+      * dunder = double _ (underscore)
+        * ```python
+          def __str__(self):
+            return self.title
+          ```
+  * console:
+    * `exit()`
+      * exits shell
+      * by exiting shell, lose user variable
+    * `python manage.py shell`
+      * runs python shell command
+    * import post (3/2/24)
+      * `from django.contrib.auth.models import User`
+        * imports user model
+      * `post.object.all()`
+        * ouputs: `<QuerySet [<Post: Blog 1>]>`
+        * shows the `return self.title` in console
+    * `post = Post.objects.first()`
+      * able to access all of the fields of the first post
+      * `post.content`
+        * outputs: `'First Post Content!'`
+      * `post.author`
+        * output: `<User: CoreyMS>`
+        * returns user object or the entire user object
+        * can access the user objects attributes
+        * `post.author.email`
+          * outputs the user's email
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
