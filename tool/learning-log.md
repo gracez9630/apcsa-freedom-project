@@ -370,6 +370,40 @@ def home(request):
         * `post.author.email`
           * outputs the user's email
 
+3/10/24:
+* continuation of [part 5](https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5)
+  * console/shell:
+    * `.modelname_set
+      * can get all of the post from the user
+      * example: `user.post_set.all()`
+        * shows QuerySet of all the post the user creates
+      * `user.post_set.create(title='Blog 3', content='Third Post Content')`
+        * creates another post with same user
+        * doesn't need `author` as django knows that the post is for that user
+        * don't need to run `.save()`
+  * `views.py`:
+    * `from .models import Post
+      * lets them run a query on the post model and pass in all of that data instead into the context
+    * inside `def home(request):`
+      * ```python
+        context = {
+          'post': Post.objects.all()
+        }
+        ```
+      * query all the posts from the database like the command line/shell
+      * when previewed, should have the data that was made in shell
+  * templates --> blog --> `home.html`
+    * [Django Date Filters](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#date)
+    * `{{ post.date_posted|date:"F d, Y" }}`
+      * `date:"F d, Y"` makes it so that it filters the date posted on the server to show the full month, the day, and the year
+  * admin panel:
+    * `admin.py`:
+      * registers model to show up on the admin page
+      * import model: `from .models import Post`
+      * `admin.site.register(Post)`
+        * in admin page would show the `Post` object
+    * at the admin page can edit out the blog posts 
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
