@@ -404,6 +404,24 @@ def home(request):
         * in admin page would show the `Post` object
     * at the admin page can edit out the blog posts 
 
+3/13/24:
+* [Python Django Tutorial: Full-Featured Web App Part 6 - User Registration](https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6)
+  * create a user registration page
+  * create account, log in, and make post
+  * create new app:
+    * `python manage.py startapp users`
+      * `project` folder to `settings.py`:
+        * in the `INSTALLED_APPS` array, add `'users.app.UserConfig',`
+      * in `user` folder to `views.py`:
+        * `from django.contrib.auth.forms import UserCreationForm`
+          * imports a user creation form that is given from django to make it easier for me to make the register
+        * ```python
+          def register(request):
+            form = UserCreationForm()
+          return render(request, 'user/register.html', {'form': form})
+          ```
+          * `{'form': form}` is the dictionary that is the context of the template
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
