@@ -422,6 +422,52 @@ def home(request):
           ```
           * `{'form': form}` is the dictionary that is the context of the template
 
+3/17/24:
+* Continuation of [Part 6](https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6)
+  * `register.html`:
+    * `{% extends "blog/base.html" %}
+      * can get information from the `base.html`
+      * ```html
+        {% extends "blog/base.html %}
+          {% block content %}
+            <div class="content-section">
+              <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                  <legend class="border-bottom mb-4">Join Today</legend>
+                  {{ form }}
+                </fieldset>
+                <div class="form-group>
+                  <button class="btn btn-outline-info" type="submit">Sign up</button>
+                </div>
+              </form>
+              <div class="border-top pt-3">
+                <small class="text-muted">
+                  Already Have An Account?
+                  <a class="ml-2"href="#">Sign In</a>
+                </small>
+              </div>
+            </div>
+          {% endblock content %}
+        ```
+        * CSRF Token (`{% csrf_token %}`):
+          * a cross-site request forgery token
+          * a hidden tag
+          * protects form against certain attacks (added security)
+          * without it the form will not work
+        * fieldset tag (`<fieldset>`):
+          * used to group related elements in a form
+        * `<legend>`:
+          * used to add a caption to a group of related form `<input>` elements that have been grouped together into a `<fieldset>`.
+        * `{{ form }}`:
+          * prints out form
+          * access that `form` variable added on context
+          * displays all of the form labels and fields
+  * project's `urls.py`:
+    * `from users import views as user_views`
+    * inside `urlpatterns`:
+      * `path('register/', user_views.register, name='register'),`
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
