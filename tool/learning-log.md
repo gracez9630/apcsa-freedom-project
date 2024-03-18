@@ -216,7 +216,7 @@ def home(request):
       * when previewing to the `home.html` site, would still have the same output as how it was before but with less code
       * if it were to add a tool like bootstrap into `base.html` template and add a `div` over `block`, the other templates that extends to `base.html` template also gets bootstrap
   * `{% load static %}` - lets us load in a `css` file from the `static` directory
-    * `<link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    * `<link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">`
       * `static` generates an absolute URL of the `static` file and access the `blog/main.css`
   * `<a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>`
     * `{% url 'blog-home' %}` - would go to the `urls.py` where it would get the name of the home url pattern
@@ -373,7 +373,7 @@ def home(request):
 3/10/24:
 * continuation of [part 5](https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5)
   * console/shell:
-    * `.modelname_set
+    * `.modelname_set`
       * can get all of the post from the user
       * example: `user.post_set.all()`
         * shows QuerySet of all the post the user creates
@@ -382,7 +382,7 @@ def home(request):
         * doesn't need `author` as django knows that the post is for that user
         * don't need to run `.save()`
   * `views.py`:
-    * `from .models import Post
+    * `from .models import Post`
       * lets them run a query on the post model and pass in all of that data instead into the context
     * inside `def home(request):`
       * ```python
