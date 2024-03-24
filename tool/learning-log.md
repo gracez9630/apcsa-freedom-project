@@ -468,6 +468,45 @@ def home(request):
     * inside `urlpatterns`:
       * `path('register/', user_views.register, name='register'),`
 
+3/23/24:
+* Continuation of [Part 6](https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6)
+  * `register.html` :
+    * `{{ form.as_p }}`
+      * render the forms in paragraph class
+  * `views.py`:
+    * to validate the post request
+    * ```python
+        if request.method == 'POST':
+          form = UserCreationForm(request.POST)
+        else:
+          form = UserCreationForm()
+      ```
+      * if we get a post request, it will instantiate a user creation form with that post data
+      * else it instantiates a empty form
+      * inside `if` statement:
+        * ```python
+            if form.is_valid():
+              username = form.cleaned_data.get('username')
+          ```
+          * `form.is_valid()` tells us if the form is valid when it is submitted
+          * `username = form.cleaned_data.get('username')`:
+            * validated form data will be in `cleaned_data` which will have nicely converted into python taught types for us from the form
+    * `from django.contrib import messages`
+      * can import a flash message which lets me send one-time alerts to a template that will only be displayed once and will disappear on the next request
+      * types of messages:
+        * `messages.debug`
+        * `messages.info`
+        * `messages.success`
+        * `messages.warning`
+        * `messages.error`
+      * inside `if form.is_valid():`
+        * `messages.success(request, f'Account created for {username}!')
+    * to make it so the register can redirect to the home page:
+      * edit `from django.shortcuts import render` to `from django.shortcuts import render, redirect`
+      * inside `if form.is_valid():`
+        * `return redirect('blog-home')
+          * when registered, should bring them to the home page
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
