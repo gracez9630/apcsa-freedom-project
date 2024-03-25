@@ -507,6 +507,7 @@ def home(request):
         * `return redirect('blog-home')
           * when registered, should bring them to the home page
 
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
