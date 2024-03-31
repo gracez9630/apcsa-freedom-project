@@ -507,6 +507,30 @@ def home(request):
         * `return redirect('blog-home')
           * when registered, should bring them to the home page
 
+3/30/24:
+* Continuation of [Part 6](https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6)
+  * flash messages:
+    * `html`:
+      * ```html
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{  message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        ```
+        * `{{  message.tags }}` - can grab the tag from the `messages` in `views.py`
+        * flash messages are one time alert, so it will only appeared once when a user logged in and will disappear when the user reload.
+  * invalid forms:
+    * `views.py`:
+      * if `form.is_valid()` becomes false, it goes to `return render(request, 'user/register.html', {'form': form})`
+        * since there is no form, it will provide a error, or tells them that it is invalid
+  * saving created forms:
+    * inside `if form.is_valid():`
+      * `form.save()`
+        *  saves the created user
+    * can go into admin page to check for newly created users
 
 <!-- 
 * Links you used today (websites, videos, etc)
