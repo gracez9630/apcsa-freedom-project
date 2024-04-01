@@ -532,6 +532,35 @@ def home(request):
         *  saves the created user
     * can go into admin page to check for newly created users
 
+3/31/24:
+* Continuation of [Part 6](https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6)
+  * create a new form to add a new field like emails
+  * new form will inherit from the user creation form
+  * create new file `forms.py`:
+    * `from django import forms`
+      * improts forms
+    * `from django.contrib.auth.models import User`
+      * imports user model
+    * `from django.contrib.auth.forms import UserCreationForm`
+      * import user creation form
+    * ```python
+      class UserRegisterForm(UserCreationForm):
+        email = forms.EmailField():
+
+        class Meta:
+          model = User
+          fields = ['username', 'email', 'password1', 'password2']
+      ```
+      * `Meta` gives us a nested name space for configuations and keeps the configurations in one place
+      * the configuration is saying that the model that will be affected is the user model
+      * so when `form.save()`, it will save the user model
+      * fields are what we want in the form and in what order
+  * `views.py`
+    * `from .forms import UserRegisterForm`
+      * inherits the stuff from `UserRegisterForm`
+      * replace both `UserCreationForm` with `UserRegisterForm`
+      * since we are not using `UserCreationForm` anymore, we can get rid of `from django.contrib.auth.forms import UserCreationForm`
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
