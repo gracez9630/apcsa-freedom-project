@@ -561,6 +561,26 @@ def home(request):
       * replace both `UserCreationForm` with `UserRegisterForm`
       * since we are not using `UserCreationForm` anymore, we can get rid of `from django.contrib.auth.forms import UserCreationForm`
 
+4/6/24:
+* Continuation of [Part 6](https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6)
+  * crispy forms
+    * allow us to put some simple tags in our template that will style the form in a bootstrap fashion
+    * terminal:
+      * `pip install django-crispy-forms`
+        * installs crispy form
+    * `settings.py`:
+      * inside `INSTALLED_APPS`
+        * `'crispy_forms',
+        * very bottom
+        * ```python
+          CRISPY_TEMPLATE_PACK = 'bootstrap4'
+          ```
+        * changes the crispy form to have bootstrap 4
+    * `login.html`:
+      * `{% load crispy_form_tags %}
+        * allows me to use crispy filter
+      * change `{{ form.as_p }}` into `{{ form|crispy }}`
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
