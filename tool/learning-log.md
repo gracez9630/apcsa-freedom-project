@@ -581,6 +581,21 @@ def home(request):
         * allows me to use crispy filter
       * change `{{ form.as_p }}` into `{{ form|crispy }}`
 
+4/7/24:
+* [Python Django Tutorial: Full-Featured Web App Part 7 - Login and Logout System](https://www.youtube.com/watch?v=-JeobI-87Dc)
+  * `project/urls.py`:
+    * `from django . contrib.auth import views as auth_views`
+      * import views as "auth_views"
+    * `path('login/', auth_views.LoginView.as_view(), name='login'),`
+    * `path('logout/', auth_views.LogoutView.as_view(), name='logout'),`
+      * `LoginView` and `LogoutView` are class based views
+      * built in views, django will handle it
+      * will not handle the templates
+      * inside `as_view()`:
+        * template_name='users/login.html'
+    * django errors are important
+      * point us in the direction in what changes we need to make to get it to work
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
