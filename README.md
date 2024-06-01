@@ -14,9 +14,13 @@ For my project, I chose to work together with Vivian to use the tool **Django** 
 
 ## Implications
 ##### PROS
-* 
+* You can add as many flashcards as you can
+* You can create a account to login to the website and the account will be remembered
+* The website can adjust to any screen size to look good
 ##### CONS
-* 
+* Others can enter the website and see the previous user's flashcards
+* The flashcards will be in order and cannot be mixed around
+* besides creating a flashcard, there is barely any content
 
 
 ## Blog
