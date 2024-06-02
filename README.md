@@ -10,7 +10,7 @@ For my project, I chose to work together with Vivian to use the tool **Django** 
 
 [Product](https://github.com/gracez9630/freedom-project-flashcard)
 
-[Presentation]()
+[Presentation](https://docs.google.com/presentation/d/1e7pYnouSV7E0yL3-lYRdPNr6UIxF4-Xa5qylhN-MZUw/edit?usp=sharing)
 
 ## Implications
 ##### PROS
