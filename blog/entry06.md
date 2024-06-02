@@ -1,7 +1,9 @@
 # Entry 6
-##### X/X/XX
+##### 5/28/24
 
-Text
+During the process of doing our elevator pitch for the Expo, I had to use the skills of collaboration and consideration. Collaboration is important as both me and Vivian had to work together and discuss what we wish to say. In order to achieve a balance of responsibility, we collaborate with each other on what we want to say during the expo. It helped a lot with presenting our project to the judges during the expo because we were prepared for what we wished to talk about. Consideration is another important skill that I had to use. Since we were given about a minute to present our project, me and Vivian had to consider what needed to be said. The most important thing we needed to consider was what the project is and why we chose to do it this way. This is so the judges did not have to stand and listen to us talking for too long. Our elevator pitch can be seen in our [notes](https://docs.google.com/document/d/1OMtAaU5FxaSzlTTy8iqPejgouxEpufPQSrDqxk5FkCk/edit?usp=sharing) at the end of the page.
+
+For the presentation, I had to use the skills of collaboration and creativity to accomplish the task. Since Vivian and I were partners, we had to collaborate with each other to create the slides. By determining what we want, in what order we want, and how much we wish to say in specific slides, collaboration was important to achieve both of our satisfaction. It was essential for the presentation as if we did not, then we would have never been able to be on the same page and may not even finish our google slides. Creativity was something that was needed to make our presentation stand out. Vivian and I had to decide how a slide should look and what should be on it so that it can be unique when compared to the others. By using creativity, it helps us to stand out while also making sure that the google slides were able to show what we wish to tell. This [google slide](https://docs.google.com/presentation/d/1e7pYnouSV7E0yL3-lYRdPNr6UIxF4-Xa5qylhN-MZUw/edit?usp=sharing) is our finish product of what our presentation was like.
 
 [Previous](entry05.md) | [Next](entry07.md)
 
